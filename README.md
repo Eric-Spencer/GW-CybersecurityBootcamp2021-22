@@ -69,7 +69,7 @@ These files have been tested and used to generate a live ELK deployment on Azure
     - name: Enable service docker on boot
       systemd:
         name: docker
-        enabled: yes``
+        enabled: yes
  
         
 This document contains the following details:
