@@ -11,7 +11,7 @@ These files have been tested and used to generate a live ELK deployment on Azure
   ![install-elk.yml](https://github.com/Eric-Spencer/GW-CybersecurityBootcamp2021-22/blob/main/Ansible/install-elk.yml)
 
 ---
-``- name: Configure Elk VM with Docker
+- name: Configure Elk VM with Docker
   hosts: elk
   remote_user: azureuser
   become: true
