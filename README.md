@@ -13,7 +13,7 @@ These files have been tested and used to generate a live ELK deployment on Azure
 ``---
 ``- name: Configure Elk VM with Docker
   ``hosts: elk
-  ``remote_user: azureuser
+  remote_user: azureuser
   become: true
   tasks:
     # Use apt module
