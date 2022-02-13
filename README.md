@@ -114,13 +114,13 @@ Only the Jumpbox Provisioner can accept connections from the Internet. Access to
 - My home IP address: 72.83.230.237
 
 Machines within the network can only be accessed by the Docker Container that is running on the Jumpbox Provisioner.
-- Only the Jumpbox Provisioner is allowed to access teh ELK VM via SSH connection. The IP of the Jumpbox, per the above table is 10.0.0.4
+- Only the Jumpbox Provisioner is allowed to access the ELK VM via SSH connection. The IP of the Jumpbox, per the above table is 10.0.0.4. Only my home IP address (72.83.230.237) can access the ELK server / Kibana page via port 5601 (Kibana's port).
 
 A summary of the access policies in place can be found in the table below.
 
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
-| Jump Box | Yes/No              | 10.0.0.1 10.0.0.2    |
+| Jumpbox  | Yes                 | 72.83.230.237        |
 |          |                     |                      |
 |          |                     |                      |
 
