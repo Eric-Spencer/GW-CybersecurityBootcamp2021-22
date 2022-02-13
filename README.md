@@ -129,7 +129,7 @@ A summary of the access policies in place can be found in the table below.
 
 ### Elk Configuration
 
-Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because it automates the process of deploying configurations on multiple web-servers, and thus ensures any configuration script is handled identically on all servers within the server groups within the Ansible host file. It is easier to maintain the servers with ansible if there are for example 100 servers. Patches can be updated easily if there were misconfigurations with ansible-playbooks. Also, Ansible is free.
+Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because it automates the process of deploying configurations on multiple web-servers, and thus ensures any configuration script is handled identically on all servers within the server / ELK groups within the Ansible host file. Automating server provisioning can eliminate mistakes; that said if a mistake is created within the Ansible playbook, this mistake could be carried across all servers configured via the script. The Ansible automation is capable of provisioning any number of hosts (within the limits of network IP space).
 
 The playbook implements the following tasks:
 - _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
