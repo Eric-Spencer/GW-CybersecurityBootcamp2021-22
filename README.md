@@ -270,7 +270,8 @@ This ELK server is configured to monitor the following machines:
 | Web-1    | 10.0.0.9     |
 | Web-2    | 10.0.0.8     |
 | Web-3    | 10.0.0.7     |
-| ELK      | 10.1.0.4     | Filebeat installed on ELK Machine to monitor it as well
+| ELK      | 10.1.0.4     | 
+- Filebeat installed on ELK Machine to monitor it as well
 
 
 We have installed the following Beats on these machines:
