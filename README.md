@@ -8,7 +8,7 @@ The files in this repository were used to configure the network depicted below.
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the YAML file may be used to install only certain pieces of it, such as Filebeat.
 
-  ![install-elk.yml](https://github.com/Eric-Spencer/GW-CybersecurityBootcamp2021-22/blob/main/Ansible/install-elk.yml)
+  ![ELK Playbook](https://github.com/Eric-Spencer/GW-CybersecurityBootcamp2021-22/blob/main/Ansible/install-elk.yml)
 
 ```
 ---
@@ -72,7 +72,47 @@ These files have been tested and used to generate a live ELK deployment on Azure
         name: docker
         enabled: yes
  ```
-        
+  ![Filebeat Playbook](https://github.com/Eric-Spencer/GW-CybersecurityBootcamp2021-22/blob/main/Ansible/Filebeat/filebeat-playbook.yml)
+
+```
+---
+- name: Installing and Launch Filebeat
+  hosts: webservers
+  become: yes
+  tasks:
+    # Use command module
+  - name: download filebeat .deb file
+    command: curl -L -O https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-7.6.1-amd64.deb
+
+    # Use command module
+  - name: install filebeat .deb
+    command: dpkg -i filebeat-7.6.1-amd64.deb
+
+    # Use copy module
+  - name: drop in filebeat.yml
+    copy:
+      src: /etc/ansible/files/filebeat-config.yml
+      dest: /etc/filebeat/filebeat.yml
+
+    # Use command module
+  - name: enable and configure system module
+    command: filebeat modules enable system
+
+    # Use command module
+  - name: setup filebeat
+    command: filebeat setup
+
+    # Use command module
+  - name: start filebeat service
+    command: service filebeat start
+
+  - name: enable service filebeat on boot
+    systemd:
+      name: filebeat
+      enabled: yes
+```
+
+
 This document contains the following details:
 - Description of the Topology
 - Access Policies
