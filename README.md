@@ -86,7 +86,7 @@ This document contains the following details:
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
 Load balancing ensures that the application will be highly available, in addition to restricting in-bound access to the network.
-- A load balancer intelligently distributes traffic from clients across multiple servers without the clients having to understand how many servers are in use or how they are configured. Because the load balancer sits between the clients and the servers it can enhance the user experience by providing additional security, performance, and resiliency.
+- A load balancer intelligently distributes traffic from clients across multiple servers without the clients having to understand how many servers are in use or how they are configured. Because the load balancer sits between the clients and the servers it can enhance the user experience by providing additional security (DoS attack counter), performance, and resiliency.
 
 What is the advantage of a jump box?
 - A jump box is a secure computer that all admins first connect to before launching any administrative task or use as an origination point to connect to other servers or untrusted environments.
@@ -111,16 +111,16 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 The machines on the internal network are not exposed to the public Internet. 
 
 Only the Jumpbox Provisioner can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- My home IP address: 72.83.230.237
+- My personal IP address
 
 Machines within the network can only be accessed by the Docker Container that is running on the Jumpbox Provisioner.
-- Only the Jumpbox Provisioner is allowed to access the ELK VM via SSH connection. The IP of the Jumpbox, per the above table is 10.0.0.4. Only my home IP address (72.83.230.237) can access the ELK server / Kibana page via port 5601 (Kibana's port).
+- Only the Jumpbox Provisioner is allowed to access the ELK VM via SSH connection. The IP of the Jumpbox, per the above table is 10.0.0.4. Only my personal IP address can access the ELK server / Kibana page via port 5601 (Kibana's port).
 
 A summary of the access policies in place can be found in the table below.
 
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
-| Jumpbox  | Yes                 | 72.83.230.237        |
+| Jumpbox  | Yes                 | My Personal IP       |
 |          |                     |                      |
 |          |                     |                      |
 
