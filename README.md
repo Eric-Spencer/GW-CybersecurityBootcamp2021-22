@@ -100,7 +100,7 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 
 | Name       | Function  | IP Address | Operating System |
 |------------|---------- |------------|------------------|
-| Jump Box   | Gateway   | 10.0.0.4   | Linux            |
+| Jumpbox    | Gateway   | 10.0.0.4   | Linux            |
 | Web-1      | Webserver | 10.0.0.9   | Linux            |
 | Web-2      | Webserver | 10.0.0.8   | Linux            |
 | Web-3      | Webserver | 10.0.0.7   | Linux            |
@@ -113,8 +113,8 @@ The machines on the internal network are not exposed to the public Internet.
 Only the Jumpbox Provisioner can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
 - My home IP address: 72.83.230.237
 
-Machines within the network can only be accessed by _____.
-- _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
+Machines within the network can only be accessed by the Docker Container that is running on the Jumpbox Provisioner.
+- Only the Jumpbox Provisioner is allowed to access teh ELK VM via SSH connection. The IP of the Jumpbox, per the above table is 10.0.0.4
 
 A summary of the access policies in place can be found in the table below.
 
