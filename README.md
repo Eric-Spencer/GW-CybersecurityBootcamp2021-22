@@ -271,14 +271,19 @@ This ELK server is configured to monitor the following machines:
 | Web-2    | 10.0.0.8     |
 | Web-3    | 10.0.0.7     |
 | ELK      | 10.1.0.4     | 
-- Filebeat installed on ELK Machine to monitor it as well
+- Filebeat only installed on ELK Machine to monitor it as well
 
 
 We have installed the following Beats on these machines:
-- _TODO: Specify which Beats you successfully installed_
+- Filebeat
+- Metricbeat
 
 These Beats allow us to collect the following information from each machine:
-- _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
+- As mentioned above, Filebeat monitors the logs or locations specified, collects that data, and forwards it to the ELK server
+![https://github.com/Eric-Spencer/GW-CybersecurityBootcamp2021-22/blob/main/](Images/Filebeat.png)
+
+- As mentioned above, Metricbeat periodically collects metric data from your target servers, this could be operating system metrics such as CPU or memory or data related to services running on the server. It can also be used to monitor other beats and ELK stack itself. Metricbeat takes the metrics and statistics that it collects and ships them to the output that you specify, such as Elasticsearch or Logstash.
+![https://github.com/Eric-Spencer/GW-CybersecurityBootcamp2021-22/blob/main/](Images/Metricbeat.png)
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
