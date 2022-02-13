@@ -250,12 +250,14 @@ A summary of the access policies in place can be found in the table below.
 
 ### Elk Configuration
 
-Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because it automates the process of deploying configurations on multiple web-servers, and thus ensures any configuration script is handled identically on all servers within the server / ELK groups within the Ansible host file. Automating server provisioning can eliminate mistakes; that said if a mistake is created within the Ansible playbook, this mistake could be carried across all servers configured via the script. The Ansible automation is capable of provisioning any number of hosts (within the limits of network IP space).
+Ansible was used to automate configuration of the ELK machine. Ansible automates the process of deploying configurations on the ELK server, as well as multiple web-servers, and thus ensures any configuration script is handled identically on all servers within the ELK / Webserver groups within the Ansible host file. Automating server provisioning can eliminate mistakes, and it also allows automation and sequential execution of the independent steps; that said if a mistake is created within the Ansible playbook, this mistake could be carried across all servers configured via the script. The Ansible automation is capable of provisioning any number of hosts (within the limits of network IP space).
 
 The playbook implements the following tasks:
-- _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
-- ...
-- ...
+- Installs docker.io to the ELK machine (VM)
+- Installs pip3 (python3) to the ELK machine
+- Installs the Docker python module
+- Increase the virtual memory of the ELK machine
+- Download and launch the Docker ELK container, configuring/publishing the ports for elasticsearch, logstash, and kibana
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
