@@ -280,9 +280,10 @@ We have installed the following Beats on these machines:
 
 These Beats allow us to collect the following information from each machine:
 - As mentioned above, Filebeat monitors the logs or locations specified, collects that data, and forwards it to the ELK server
-![https://github.com/Eric-Spencer/GW-CybersecurityBootcamp2021-22/blob/main/](Images/Filebeat.png)
 
+![https://github.com/Eric-Spencer/GW-CybersecurityBootcamp2021-22/blob/main/](Images/Filebeat.png)
 - As mentioned above, Metricbeat periodically collects metric data from your target servers, this could be operating system metrics such as CPU or memory or data related to services running on the server. It can also be used to monitor other beats and ELK stack itself. Metricbeat takes the metrics and statistics that it collects and ships them to the output that you specify, such as Elasticsearch or Logstash.
+
 ![https://github.com/Eric-Spencer/GW-CybersecurityBootcamp2021-22/blob/main/](Images/Metricbeat.png)
 
 ### Using the Playbook
